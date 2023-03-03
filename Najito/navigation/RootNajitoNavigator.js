@@ -2,8 +2,9 @@ import React from "react";
 import { StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../screens/HomeScreen";
+import CocktailsScreen from "../screens/CocktailsScreen";
 import DetailsScreen from "../screens/DetailsScreen";
+import IngredientsScreen from "../screens/IngredientsScreen";
 import { colors } from "../theme/colors";
 
 const Stack = createNativeStackNavigator();
@@ -16,7 +17,7 @@ const RootNajitoNavigator = () => {
           backgroundColor={colors.headerBackground}
         />
         <Stack.Navigator
-          initialRouteName="Home"
+          initialRouteName="Cocktails"
           screenOptions={{
             headerStyle: {
               backgroundColor: colors.headerBackground,
@@ -28,9 +29,14 @@ const RootNajitoNavigator = () => {
           }}
         >
           <Stack.Screen
-            name="Home"
-            component={HomeScreen}
+            name="Cocktails"
+            component={CocktailsScreen}
             options={{ title: "Cocktails" }}
+          />
+          <Stack.Screen
+            name="Ingredients"
+            component={IngredientsScreen}
+            options={{ title: "Ingredients" }}
           />
           <Stack.Screen name="Details" component={DetailsScreen} />
         </Stack.Navigator>

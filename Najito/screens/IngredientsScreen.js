@@ -2,10 +2,10 @@ import React from "react";
 import { View, Text, Button } from "react-native";
 import styles from "../theme/styles";
 
-const HomeScreen = ({ navigation }) => {
+const IngredientsScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>This is the home screen</Text>
+      <Text style={styles.text}>c la page des ingredients</Text>
       <Button
         title="Go to Details"
         onPress={() => {
@@ -20,4 +20,4 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
-export default HomeScreen;
+export default IngredientsScreen;
